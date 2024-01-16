@@ -8,7 +8,7 @@ const app = express();
 const server = http.createServer(app);
 export const io = new Server(server);
 
-mongoose.connect('mongodb+srv://pauloha676:hvNN15bEUEeph9mG@waiterapp.qixo5ll.mongodb.net/?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://pauloha676:Rrdjh1MsL57dL7jI@waiterapp.qixo5ll.mongodb.net/?retryWrites=true&w=majority')
   .then(() => {
     const port = 3001;
 
