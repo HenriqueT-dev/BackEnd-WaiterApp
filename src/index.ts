@@ -8,9 +8,10 @@ const app = express();
 const server = http.createServer(app);
 export const io = new Server(server);
 
-mongoose.connect('mongodb+srv://pauloha676:Rrdjh1MsL57dL7jI@waiterapp.qixo5ll.mongodb.net/?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://pauloha676:x1aa1gyBtBDqYv03@waiterapp.qixo5ll.mongodb.net/waiterapp?retryWrites=true&w=majority')
   .then(() => {
     const port = 3001;
+    console.log('aparentemente tudo ok');
 
     app.use((req, res, next) => {
       res.setHeader('Access-Control-Allow-Origin', '*');
