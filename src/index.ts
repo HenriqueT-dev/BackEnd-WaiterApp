@@ -8,7 +8,7 @@ const app = express();
 const server = http.createServer(app);
 export const io = new Server(server);
 
-mongoose.connect('mongodb://localhost:27017')
+mongoose.connect('mongodb+srv://pauloha676:hvNN15bEUEeph9mG@waiterapp.qixo5ll.mongodb.net/?retryWrites=true&w=majority')
   .then(() => {
     const port = 3001;
 
@@ -26,6 +26,6 @@ mongoose.connect('mongodb://localhost:27017')
       console.log(`🔥 server is running on http://localhost:${port}`);
     });
   })
-  .catch(() => console.log('Erro ao conectar ao mongodb'));
+  .catch((error) => console.log('Erro ao conectar ao mongodb' + error.message));
 
 
