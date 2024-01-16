@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node dist/index.js",
+    "start": "npm run build && npm run global",
     "build": "tsc -p .",
     "global": "npm i -g && node ./dist/index.js"
   },
