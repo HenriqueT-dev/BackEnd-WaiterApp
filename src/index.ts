@@ -8,7 +8,7 @@ const app = express();
 const server = http.createServer(app);
 export const io = new Server(server);
 
-mongoose.connect('mongodb+srv://pauloha676:x1aa1gyBtBDqYv03@waiterapp.qixo5ll.mongodb.net/waiterapp?retryWrites=true&w=majority')
+mongoose.connect('mongodb://localhost:27017')
   .then(() => {
     const port = 3001;
     console.log('aparentemente tudo ok');
@@ -28,5 +28,7 @@ mongoose.connect('mongodb+srv://pauloha676:x1aa1gyBtBDqYv03@waiterapp.qixo5ll.mo
     });
   })
   .catch((error) => console.log('Erro ao conectar ao mongodb' + error.message));
+
+//'mongodb+srv://pauloha676:x1aa1gyBtBDqYv03@waiterapp.qixo5ll.mongodb.net/waiterapp?retryWrites=true&w=majority'
 
 
